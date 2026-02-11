@@ -1,68 +1,67 @@
 # ggsegShen
 
-Shen 268-parcel functional brain parcellation for the ggseg ecosystem.
+> **Work in Progress** — This package is under active development and
+> has not yet been officially released.
 
-Provides a unified `ggseg_atlas` object with both 2D polygon geometry
-and 3D meshes derived from the Shen whole-brain parcellation of 268
-functional nodes.
-
-Shen X et al. (2013) NeuroImage, 82:403-415
-[pubmed](https://pubmed.ncbi.nlm.nih.gov/23747961/)
+Shen 268-node functional parcellation for the ggseg ecosystem.
 
 ## Installation
 
-We recommend installing the ggseg-atlases through the ggseg
-[r-universe](https://ggseg.r-universe.dev/ui#builds):
+You can install this package from [GitHub](https://github.com/) with:
 
 ``` r
-# Enable this universe
-options(repos = c(
-    ggseg = 'https://ggseg.r-universe.dev',
-    CRAN = 'https://cloud.r-project.org'))
-
-# Install some packages
-install.packages('ggsegShen')
+# install.packages("pak")
+pak::pak("ggseg/ggsegShen")
 ```
 
-You can install the development version from
-[GitHub](https://github.com/) with:
-
-``` r
-# install.packages("devtools")
-devtools::install_github("ggseg/ggsegShen")
-```
-
-## Example
-
-``` r
-library(ggsegShen)
-```
+## Cortical atlas
 
 ``` r
 library(ggseg)
+#> Loading required package: ggseg.formats
+library(ggsegShen)
 library(ggplot2)
 
 ggplot() +
-  geom_brain(atlas = shen268)
+  geom_brain(
+    atlas = shen268_cortical,
+    mapping = aes(fill = label),
+    position = position_brain(hemi ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = shen268_cortical$palette, na.value = "grey") +
+  theme_void() +
+  ggtitle("Shen 268 cortical parcellation")
 ```
 
-## Source data files
+![](reference/figures/README-cortical-1.png)
 
-The volumetric parcellation file (`shen_2mm_268_parcellation.nii.gz`) in
-`data-raw/` was downloaded from NeuroVault collection 2489:
+## Subcortical atlas
 
-    https://neurovault.org/collections/2489/
+``` r
+ggplot() +
+  geom_brain(
+    atlas = shen268_subcortical,
+    mapping = aes(fill = label),
+    position = position_brain(. ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = shen268_subcortical$palette, na.value = "grey") +
+  theme_void() +
+  ggtitle("Shen 268 subcortical parcellation")
+```
 
-This is the Shen 268-parcel functional parcellation derived from
-resting-state fMRI data, covering the whole brain including cortical,
-subcortical, and cerebellar regions.
+![](reference/figures/README-subcortical-1.png)
 
-Reference: Shen X, Tokoglu F, Papademetris X, Constable RT (2013)
-Groupwise whole-brain parcellation from resting-state fMRI data for
-network node identification. *NeuroImage*, 82, 403-415.
-<doi:%5B10.1016/j.neuroimage.2013.05.081>\](<https://doi.org/10.1016/j.neuroimage.2013.05.081>)
+## Reference
 
-Please note that the ‘ggsegShen’ project is released with a [Contributor
+Shen X et al. (2013). Groupwise whole-brain parcellation from
+resting-state fMRI data for network node identification. *NeuroImage*,
+82, 403-415.
+
+## Code of Conduct
+
+Please note that the ggsegShen project is released with a [Contributor
 Code of Conduct](https://ggseg.github.io/ggsegShen/CODE_OF_CONDUCT.md).
 By contributing to this project, you agree to abide by its terms.
 
