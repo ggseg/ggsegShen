@@ -1,0 +1,67 @@
+# ggsegShen
+
+Shen 268-parcel functional brain parcellation for the ggseg ecosystem.
+
+Provides a unified `ggseg_atlas` object with both 2D polygon geometry
+and 3D meshes derived from the Shen whole-brain parcellation of 268
+functional nodes.
+
+Shen X et al. (2013) NeuroImage, 82:403-415
+[pubmed](https://pubmed.ncbi.nlm.nih.gov/23747961/)
+
+## Installation
+
+We recommend installing the ggseg-atlases through the ggseg
+[r-universe](https://ggseg.r-universe.dev/ui#builds):
+
+``` r
+# Enable this universe
+options(repos = c(
+    ggseg = 'https://ggseg.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'))
+
+# Install some packages
+install.packages('ggsegShen')
+```
+
+You can install the development version from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("ggseg/ggsegShen")
+```
+
+## Example
+
+``` r
+library(ggsegShen)
+```
+
+``` r
+library(ggseg)
+library(ggplot2)
+
+ggplot() +
+  geom_brain(atlas = shen268)
+```
+
+## Source data files
+
+The volumetric parcellation file (`shen_2mm_268_parcellation.nii.gz`) in
+`data-raw/` was downloaded from NeuroVault collection 2489:
+
+    https://neurovault.org/collections/2489/
+
+This is the Shen 268-parcel functional parcellation derived from
+resting-state fMRI data, covering the whole brain including cortical,
+subcortical, and cerebellar regions.
+
+Reference: Shen X, Tokoglu F, Papademetris X, Constable RT (2013)
+Groupwise whole-brain parcellation from resting-state fMRI data for
+network node identification. *NeuroImage*, 82, 403-415.
+<doi:%5B10.1016/j.neuroimage.2013.05.081>\](<https://doi.org/10.1016/j.neuroimage.2013.05.081>)
+
+Please note that the ‘ggsegShen’ project is released with a [Contributor
+Code of Conduct](https://ggseg.github.io/ggsegShen/CODE_OF_CONDUCT.md).
+By contributing to this project, you agree to abide by its terms.
