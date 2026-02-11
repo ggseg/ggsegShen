@@ -1,0 +1,34 @@
+Package: ggsegShen
+Title: Shen 268 Functional Parcellation for the 'ggseg' Ecosystem
+Version: 1.0.0
+Authors@R: c(
+    person("Athanasia Mo", "Mowinckel", , "a.m.mowinckel@psykologi.uio.no", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-5756-0223"))
+  )
+Description: Shen whole-brain parcellation of 268 functional nodes for the
+    'ggseg' ecosystem. Provides a unified 'ggseg_atlas' object with both 2D
+    polygon geometry and 3D vertex indices, for use with 'ggseg' and 'ggseg3d'.
+License: CC0
+Encoding: UTF-8
+LazyData: true
+LazyDataCompression: xz
+Depends:
+    R (>= 3.5),
+    ggseg.formats
+Suggests:
+    ggseg,
+    ggseg3d,
+    ggplot2,
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0),
+    vdiffr
+Remotes:
+    ggseg/ggseg,
+    ggseg/ggseg3d,
+    ggseg/ggseg.formats
+URL: https://github.com/ggseg/ggsegShen
+BugReports: https://github.com/ggseg/ggsegShen/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Config/testthat/edition: 3
