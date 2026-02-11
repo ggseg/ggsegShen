@@ -1,10 +1,23 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  fig.width = 6,
+  fig.retina = 3,
+  out.width = "100%"
+)
+```
+
 # ggsegShen
 
-> **Work in Progress** — This package is under active development and
-> has not yet been officially released.
+> **Work in Progress** — This package is under active development and has not yet been officially released.
 
 Shen 268-node functional parcellation for the ggseg ecosystem.
 
@@ -18,10 +31,8 @@ pak::pak("ggseg/ggsegShen")
 ```
 
 ## Cortical atlas
-
-``` r
+```{r "cortical"}
 library(ggseg)
-#> Loading required package: ggseg.formats
 library(ggsegShen)
 library(ggplot2)
 
@@ -37,11 +48,8 @@ ggplot() +
   ggtitle("Shen 268 cortical parcellation")
 ```
 
-<img src="man/figures/README-cortical-1.png" alt="" width="100%" />
-
 ## Subcortical atlas
-
-``` r
+```{r "subcortical"}
 ggplot() +
   geom_brain(
     atlas = shen268_subcortical,
@@ -54,16 +62,13 @@ ggplot() +
   ggtitle("Shen 268 subcortical parcellation")
 ```
 
-<img src="man/figures/README-subcortical-1.png" alt="" width="100%" />
-
 ## Reference
 
-Shen X et al. (2013). Groupwise whole-brain parcellation from
-resting-state fMRI data for network node identification. *NeuroImage*,
-82, 403-415.
+Shen X et al. (2013). Groupwise whole-brain parcellation from resting-state
+fMRI data for network node identification. *NeuroImage*, 82, 403-415.
 
 ## Code of Conduct
 
-Please note that the ggsegShen project is released with a [Contributor
-Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
-you agree to abide by its terms.
+Please note that the ggsegShen project is released with a
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this
+project, you agree to abide by its terms.
