@@ -4,39 +4,30 @@
 #' (Shen et al., 2013). Contains 2D polygon geometry for
 #' [ggseg::geom_brain()] and 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
-#' @docType data
-#' @name shen268_cortical
-#' @usage data(shen268_cortical)
-#' @keywords datasets
 #' @family ggseg_atlases
 #'
 #' @references Shen X et al. (2013). Groupwise whole-brain parcellation
 #'   from resting-state fMRI data for network node identification.
 #'   \doi{10.1016/j.neuroimage.2013.05.081}
 #'
-#' @format A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @return A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @export
 #' @examples
-#' data(shen268_cortical)
-#' shen268_cortical
-"shen268_cortical"
-
+#' shen268_cortical()
+shen268_cortical <- function() .shen268_cortical
 #' Shen 268 Subcortical Parcellation
 #'
 #' Subcortical regions from the Shen 268-node functional parcellation
 #' (Shen et al., 2013). Contains 2D polygon geometry and 3D meshes.
 #'
-#' @docType data
-#' @name shen268_subcortical
-#' @usage data(shen268_subcortical)
-#' @keywords datasets
 #' @family ggseg_atlases
 #'
 #' @references Shen X et al. (2013). Groupwise whole-brain parcellation
 #'   from resting-state fMRI data for network node identification.
 #'   \doi{10.1016/j.neuroimage.2013.05.081}
 #'
-#' @format A [ggseg.formats::ggseg_atlas] object (subcortical).
+#' @return A [ggseg.formats::ggseg_atlas] object (subcortical).
+#' @export
 #' @examples
-#' data(shen268_subcortical)
-#' shen268_subcortical
-"shen268_subcortical"
+#' shen268_subcortical()
+shen268_subcortical <- function() .shen268_subcortical

@@ -38,12 +38,12 @@ library(ggplot2)
 
 ggplot() +
   geom_brain(
-    atlas = shen268_cortical,
+    atlas = shen268_cortical(),
     mapping = aes(fill = label),
     position = position_brain(hemi ~ view),
     show.legend = FALSE
   ) +
-  scale_fill_manual(values = shen268_cortical$palette, na.value = "grey") +
+  scale_fill_manual(values = shen268_cortical()$palette, na.value = "grey") +
   theme_void() +
   ggtitle("Shen 268 cortical parcellation")
 ```
@@ -52,12 +52,12 @@ ggplot() +
 ```{r "subcortical"}
 ggplot() +
   geom_brain(
-    atlas = shen268_subcortical,
+    atlas = shen268_subcortical(),
     mapping = aes(fill = label),
     position = position_brain(. ~ view),
     show.legend = FALSE
   ) +
-  scale_fill_manual(values = shen268_subcortical$palette, na.value = "grey") +
+  scale_fill_manual(values = shen268_subcortical()$palette, na.value = "grey") +
   theme_void() +
   ggtitle("Shen 268 subcortical parcellation")
 ```
