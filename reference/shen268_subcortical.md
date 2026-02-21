@@ -6,13 +6,13 @@ et al., 2013). Contains 2D polygon geometry and 3D meshes.
 ## Usage
 
 ``` r
-data(shen268_subcortical)
+shen268_subcortical()
 ```
 
-## Format
+## Value
 
 A
-[ggseg.formats::ggseg_atlas](https://ggseg.github.io/ggseg.formats/reference/ggseg_atlas.html)
+[ggseg.formats::ggseg_atlas](https://ggsegverse.github.io/ggseg.formats/reference/ggseg_atlas.html)
 object (subcortical).
 
 ## References
@@ -24,13 +24,12 @@ resting-state fMRI data for network node identification.
 ## See also
 
 Other ggseg_atlases:
-[`shen268_cortical`](https://ggseg.github.io/ggsegShen/reference/shen268_cortical.md)
+[`shen268_cortical()`](https://ggseg.github.io/ggsegShen/reference/shen268_cortical.md)
 
 ## Examples
 
 ``` r
-data(shen268_subcortical)
-shen268_subcortical
+shen268_subcortical()
 #> 
 #> ── shen268_subcortical ggseg atlas ─────────────────────────────────────────────
 #> Type: subcortical

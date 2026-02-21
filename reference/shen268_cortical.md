@@ -2,20 +2,20 @@
 
 Cortical regions from the Shen 268-node functional parcellation (Shen et
 al., 2013). Contains 2D polygon geometry for
-[`ggseg::geom_brain()`](https://rdrr.io/pkg/ggseg/man/ggbrain.html) and
-3D vertex indices for
+[`ggseg::geom_brain()`](https://ggsegverse.github.io/ggseg/reference/ggbrain.html)
+and 3D vertex indices for
 [`ggseg3d::ggseg3d()`](https://rdrr.io/pkg/ggseg3d/man/ggseg3d.html).
 
 ## Usage
 
 ``` r
-data(shen268_cortical)
+shen268_cortical()
 ```
 
-## Format
+## Value
 
 A
-[ggseg.formats::ggseg_atlas](https://ggseg.github.io/ggseg.formats/reference/ggseg_atlas.html)
+[ggseg.formats::ggseg_atlas](https://ggsegverse.github.io/ggseg.formats/reference/ggseg_atlas.html)
 object (cortical).
 
 ## References
@@ -27,13 +27,12 @@ resting-state fMRI data for network node identification.
 ## See also
 
 Other ggseg_atlases:
-[`shen268_subcortical`](https://ggseg.github.io/ggsegShen/reference/shen268_subcortical.md)
+[`shen268_subcortical()`](https://ggseg.github.io/ggsegShen/reference/shen268_subcortical.md)
 
 ## Examples
 
 ``` r
-data(shen268_cortical)
-shen268_cortical
+shen268_cortical()
 #> 
 #> ── shen268_cortical ggseg atlas ────────────────────────────────────────────────
 #> Type: cortical

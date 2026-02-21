@@ -14,8 +14,9 @@ ggseg ecosystem. It is a data-only package with no custom functions.
 
 This package **depends** on `ggseg.formats` which provides the
 `ggseg_atlas` class. The atlas objects work with both
-[`ggseg::geom_brain()`](https://rdrr.io/pkg/ggseg/man/ggbrain.html) (2D)
-and [`ggseg3d::ggseg3d()`](https://rdrr.io/pkg/ggseg3d/man/ggseg3d.html)
+[`ggseg::geom_brain()`](https://ggsegverse.github.io/ggseg/reference/ggbrain.html)
+(2D) and
+[`ggseg3d::ggseg3d()`](https://rdrr.io/pkg/ggseg3d/man/ggseg3d.html)
 (3D).
 
 ## Developer workflows
