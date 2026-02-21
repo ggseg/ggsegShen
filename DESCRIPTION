@@ -11,7 +11,8 @@ Description: Shen whole-brain parcellation of 268 functional nodes for the
 License: CC0
 Encoding: UTF-8
 Depends:
-    R (>= 3.5),
+    R (>= 3.5)
+Imports:
     ggseg.formats
 Suggests:
     ggseg,

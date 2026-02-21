@@ -11,8 +11,8 @@ Shen whole-brain parcellation of 268 functional nodes for the 'ggseg' ecosystem.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/ggseg/ggsegShen}
-  \item Report bugs at \url{https://github.com/ggseg/ggsegShen/issues}
+  \item \url{https://github.com/ggsegverse/ggsegShen}
+  \item Report bugs at \url{https://github.com/ggsegverse/ggsegShen/issues}
 }
 
 }

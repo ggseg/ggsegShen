@@ -11,6 +11,7 @@
 #'   \doi{10.1016/j.neuroimage.2013.05.081}
 #'
 #' @return A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @import ggseg.formats
 #' @export
 #' @examples
 #' shen268_cortical()
