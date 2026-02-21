@@ -8,9 +8,9 @@ geometry and 3D vertex indices, for use with 'ggseg' and 'ggseg3d'.
 
 Useful links:
 
-- <https://github.com/ggseg/ggsegShen>
+- <https://github.com/ggsegverse/ggsegShen>
 
-- Report bugs at <https://github.com/ggseg/ggsegShen/issues>
+- Report bugs at <https://github.com/ggsegverse/ggsegShen/issues>
 
 ## Author
 
