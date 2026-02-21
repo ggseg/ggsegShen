@@ -8,16 +8,16 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/ggseg/ggsegShen/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/ggsegverse/ggsegShen/blob/main/DESCRIPTION)
 
 Mowinckel A (2026). *ggsegShen: Shen 268 Functional Parcellation for the
 'ggseg' Ecosystem*. R package version 1.0.0,
-<https://github.com/ggseg/ggsegShen>.
+<https://github.com/ggsegverse/ggsegShen>.
 
     @Manual{,
       title = {ggsegShen: Shen 268 Functional Parcellation for the 'ggseg' Ecosystem},
       author = {Athanasia Mo Mowinckel},
       year = {2026},
       note = {R package version 1.0.0},
-      url = {https://github.com/ggseg/ggsegShen},
+      url = {https://github.com/ggsegverse/ggsegShen},
     }
