@@ -1,37 +1,55 @@
 ---
-output: github_document
+format: gfm
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- README.md is generated from README.qmd. Please edit that file -->
 
-```{r, include = FALSE}
+```{r}
+#| label: setup
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
   fig.width = 6,
-  fig.retina = 3,
-  out.width = "100%"
+  out.width = "100%",
+  fig.retina = 3
 )
 ```
 
 # ggsegShen
 
-> **Work in Progress** — This package is under active development and has not yet been officially released.
+> **Work in Progress** -- This package is under active development and has not yet been officially released.
 
 Shen 268-node functional parcellation for the ggseg ecosystem.
 
 ## Installation
 
+We recommend installing the ggseg-atlases through the ggseg
+[r-universe](https://ggseg.r-universe.dev/ui#builds):
+
+```{r}
+#| label: install-r-universe
+#| eval: false
+options(repos = c(
+  ggseg = "https://ggseg.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
+
+install.packages("ggsegShen")
+```
+
 You can install this package from [GitHub](https://github.com/) with:
 
-``` r
+```r
 # install.packages("pak")
 pak::pak("ggseg/ggsegShen")
 ```
 
 ## Cortical atlas
-```{r "cortical"}
+
+```{r}
+#| label: cortical
 library(ggseg)
 library(ggsegShen)
 library(ggplot2)
@@ -49,7 +67,9 @@ ggplot() +
 ```
 
 ## Subcortical atlas
-```{r "subcortical"}
+
+```{r}
+#| label: subcortical
 ggplot() +
   geom_brain(
     atlas = shen268_subcortical(),
